@@ -1,0 +1,308 @@
+{
+  "number": 1,
+  "slug": "chess-safe-moves",
+  "title": "Stop Hanging Pieces",
+  "goal": "Notice the threat, identify the defender, and check the move you intend to play.",
+  "lessons": [
+    {
+      "id": "01.1",
+      "title": "Save the piece that is attacked",
+      "idea": "Before improving your position, deal with a piece that can be taken. Saving it requires a safe destination, not just a square that looks active.",
+      "facts": [
+        "Black's pawn on d5 attacks the bishop on c4: black pawns capture toward lower rank numbers.",
+        "The pawn on e6 defends d5. The pawn does not defend the square directly in front of it.",
+        "The bishop can retreat along c4-d3. On d3 it is outside both pawns' attacks."
+      ],
+      "explain": [
+        "Start with the opponent's immediate capture: ...dxc4 would remove a bishop for no compensation. White should answer that threat now. Bd3 moves the bishop to a safe square and keeps it in the game.",
+        "After the quiet illustrative reply ...Kf8, the bishop is still safe. That reply is not forced; the point is to check the destination against all enemy attacks before choosing it. Retreating can preserve more useful activity than a material-losing advance."
+      ],
+      "caution": "Bxd5 takes a pawn, but ...exd5 takes the bishop. The whole exchange gives up a bishop for one pawn. Count the resulting material, not the first capture alone.",
+      "questions": [
+        "Which black pawn attacks the bishop on g4?",
+        "Does Bxh5 solve the problem? Write Black's reply and the material exchanged.",
+        "Name a safe bishop retreat and explain why it is safe."
+      ],
+      "answers": [
+        "The h5-pawn attacks g4. A pawn does not attack the square directly ahead of it; trace its two diagonal capture squares.",
+        "Bxh5 is met by ...gxh5. The g6-pawn protects h5, so White exchanges a bishop for a pawn and has not saved the piece.",
+        "Be2 is a safe example. The path g4-f3-e2 is clear, and no black piece attacks e2. Bd1 or Bh3 can also be considered if you verify their paths and destinations; this is not a one-move puzzle."
+      ],
+      "transfer": "In your next three games, say which enemy pawn attacks each bishop before you move it. After a game, revisit one retreat and explain what material it preserved.",
+      "recall": [
+        "Why can capturing the attacking pawn still lose a piece?",
+        "Because another enemy piece may recapture. Calculate both captures and compare the material left."
+      ],
+      "positions": {
+        "A": {
+          "fen": "r5k1/pp3ppp/4p3/3p4/2B5/4P3/PP3PPP/R5K1 w - - 0 1",
+          "opening_moves": "",
+          "line": "Bd3 Kf8",
+          "alternative": "Bxd5 exd5",
+          "purpose": "candidate",
+          "validation": {
+            "id": "01.1A",
+            "title": "Save the piece that is attacked",
+            "fen": "r5k1/pp3ppp/4p3/3p4/2B5/4P3/PP3PPP/R5K1 w - - 0 1",
+            "line": "Bd3 Kf8",
+            "bad": "Bxd5 exd5",
+            "checkmate": false,
+            "stalemate": false,
+            "candidates": [
+              {
+                "san": "Bd3",
+                "score": "+547",
+                "depth": 18
+              },
+              {
+                "san": "Be2",
+                "score": "+544",
+                "depth": 18
+              },
+              {
+                "san": "Bb5",
+                "score": "+543",
+                "depth": 18
+              }
+            ],
+            "chosen_score": "+547"
+          }
+        },
+        "B": {
+          "fen": "r5k1/pp3p2/6p1/7p/6B1/4P3/PP3PPP/R5K1 w - - 0 1",
+          "opening_moves": "",
+          "line": "Be2 Kf8",
+          "alternative": "Bxh5 gxh5",
+          "purpose": "candidate",
+          "validation": {
+            "id": "01.1B",
+            "title": "Save the piece that is attacked",
+            "fen": "r5k1/pp3p2/6p1/7p/6B1/4P3/PP3PPP/R5K1 w - - 0 1",
+            "line": "Be2 Kf8",
+            "bad": "Bxh5 gxh5",
+            "checkmate": false,
+            "stalemate": false,
+            "candidates": [
+              {
+                "san": "Bf3",
+                "score": "+694",
+                "depth": 18
+              },
+              {
+                "san": "Be2",
+                "score": "+685",
+                "depth": 18
+              },
+              {
+                "san": "Bd1",
+                "score": "+676",
+                "depth": 18
+              }
+            ],
+            "chosen_score": "+679"
+          }
+        }
+      }
+    },
+    {
+      "id": "01.2",
+      "title": "A capture is safe only after the reply",
+      "idea": "An undefended piece can be a real opportunity. The useful habit is not \"never take\"; it is \"take only after checking defenders and forcing replies.\"",
+      "facts": [
+        "White's rook has a clear path from c1 to c6.",
+        "A black pawn on b6 attacks a5 and c5. It does not protect c6.",
+        "Black can check on d1 after the capture, but White has already made an escape square on h2."
+      ],
+      "explain": [
+        "Rxc6 wins a knight. Before playing it, look for Black's strongest forcing idea: ...Rd1+. The white king can step to h2 because the h-pawn stands on h3 and h2 is not attacked.",
+        "The sample line stops after the check is answered. White keeps the extra knight; there is still a game to play. A capture can be sound even when the opponent replies with check, provided you can answer the check without returning the gain."
+      ],
+      "caution": "Defenders are about squares, not proximity. A pawn one square away may defend nothing relevant. Conversely, moving a pawn back one rank can turn an apparently free knight into a poisoned capture.",
+      "questions": [
+        "What changed from Model A?",
+        "Calculate Rxc6 through Black's recapture. Who gets the more valuable piece?",
+        "Give a safe rook move if you decline the capture."
+      ],
+      "answers": [
+        "The black b-pawn is on b7, not b6. From b7 it attacks c6, so the knight now has a pawn defender.",
+        "Rxc6 bxc6 trades a rook for a knight. Using rough values of rook 5 and knight 3, White gives up about two points of material. These values are guides, but there is no compensating attack in this exercise.",
+        "Rc3 is one safe example: the rook stays on the c-file and avoids the defended knight. Rc2 and a king move can also be reasonable. The required answer is the defender and the consequence, not a unique quiet move."
+      ],
+      "transfer": "Pick any capture from a recent game. On a board, draw the defenders of the target square, then test every available check after your capture.",
+      "recall": [
+        "Does a black pawn on b6 defend c6?",
+        "No. It attacks a5 and c5. A black pawn on b7 attacks c6."
+      ],
+      "positions": {
+        "A": {
+          "fen": "3r2k1/p4ppp/1pn5/8/8/5N1P/PP3PP1/2R3K1 w - - 0 1",
+          "opening_moves": "",
+          "line": "Rxc6 Rd1+ Kh2",
+          "alternative": "",
+          "purpose": "candidate",
+          "validation": {
+            "id": "01.2A",
+            "title": "A capture is safe only after the reply",
+            "fen": "3r2k1/p4ppp/1pn5/8/8/5N1P/PP3PP1/2R3K1 w - - 0 1",
+            "line": "Rxc6 Rd1+ Kh2",
+            "bad": "",
+            "checkmate": false,
+            "stalemate": false,
+            "candidates": [
+              {
+                "san": "Rxc6",
+                "score": "+615",
+                "depth": 18
+              },
+              {
+                "san": "a4",
+                "score": "+13",
+                "depth": 18
+              },
+              {
+                "san": "a3",
+                "score": "+13",
+                "depth": 18
+              }
+            ],
+            "chosen_score": "+637"
+          }
+        },
+        "B": {
+          "fen": "3r2k1/pp3ppp/2n5/8/8/5N1P/PP3PP1/2R3K1 w - - 0 1",
+          "opening_moves": "",
+          "line": "Rc3",
+          "alternative": "Rxc6 bxc6",
+          "purpose": "candidate",
+          "validation": {
+            "id": "01.2B",
+            "title": "A capture is safe only after the reply",
+            "fen": "3r2k1/pp3ppp/2n5/8/8/5N1P/PP3PP1/2R3K1 w - - 0 1",
+            "line": "Rc3",
+            "bad": "Rxc6 bxc6",
+            "checkmate": false,
+            "stalemate": false,
+            "candidates": [
+              {
+                "san": "Kf1",
+                "score": "0",
+                "depth": 18
+              },
+              {
+                "san": "a3",
+                "score": "-2",
+                "depth": 18
+              },
+              {
+                "san": "Ng5",
+                "score": "-4",
+                "depth": 18
+              }
+            ],
+            "chosen_score": "0"
+          }
+        }
+      }
+    },
+    {
+      "id": "01.3",
+      "title": "Find the threat before developing",
+      "idea": "Development is valuable only if it meets the position's immediate demands. An early queen attack is best answered by identifying the mating square and the piece supporting it.",
+      "facts": [
+        "The queen on h5 and bishop on c4 both attack f7.",
+        "The king on e8 cannot capture a queen on f7 while the c4-bishop protects that square.",
+        "...g6 attacks the queen and blocks its diagonal h5-g6-f7."
+      ],
+      "explain": [
+        "Black begins with ...g6, interrupting the queen's route to f7 while gaining time against the queen. After Qf3, the queen threatens f7 down the f-file instead.",
+        "Now ...Nf6 develops a piece and blocks that new line. The same developing move that failed on the first turn works on the second because the attack's geometry has changed. Always reassess after the queen moves."
+      ],
+      "caution": "Playing ...Nf6 immediately attacks the queen but allows Qxf7#. An attack on the queen does not force it to retreat when it has checkmate available.",
+      "questions": [
+        "Which piece has moved compared with Model A, and what important square does it no longer protect?",
+        "Can Black now play ...Nf6? Test Qxf7+ rather than guessing.",
+        "After White withdraws the queen to e2, suggest a developing continuation."
+      ],
+      "answers": [
+        "White's bishop is on b5 instead of c4. It no longer protects f7. The queen's attack looks similar, but the mating support is absent.",
+        "Yes. After ...Nf6 Qxf7+ Black can play ...Kxf7. The king is not moving into any white attack on f7. White loses a queen for a pawn; the check is not mate.",
+        "...Bc5 develops the f8-bishop and eyes f2. Other sensible developing moves exist. The lesson is to inspect the actual support for a threat before importing a familiar response."
+      ],
+      "transfer": "When facing an early queen move, write the threatened capture and name its supporting piece. If you cannot name a concrete threat, continue developing after a safety check.",
+      "recall": [
+        "Why does ...Nf6 fail with a white bishop on c4 but work with it on b5?",
+        "The c4-bishop protects f7, making Qxf7 mate. The b5-bishop does not, so ...Kxf7 is legal."
+      ],
+      "positions": {
+        "A": {
+          "fen": "r1bqkbnr/pppp1ppp/2n5/4p2Q/2B1P3/8/PPPP1PPP/RNB1K1NR b KQkq - 3 3",
+          "opening_moves": "e4 e5 Bc4 Nc6 Qh5",
+          "line": "g6 Qf3 Nf6",
+          "alternative": "Nf6 Qxf7#",
+          "purpose": "candidate",
+          "validation": {
+            "id": "01.3A",
+            "title": "Find the threat before developing",
+            "fen": "r1bqkbnr/pppp1ppp/2n5/4p2Q/2B1P3/8/PPPP1PPP/RNB1K1NR b KQkq - 3 3",
+            "line": "g6 Qf3 Nf6",
+            "bad": "Nf6 Qxf7#",
+            "checkmate": false,
+            "stalemate": false,
+            "candidates": [
+              {
+                "san": "g6",
+                "score": "+35",
+                "depth": 18
+              },
+              {
+                "san": "Qe7",
+                "score": "0",
+                "depth": 18
+              },
+              {
+                "san": "Qf6",
+                "score": "-15",
+                "depth": 18
+              }
+            ],
+            "chosen_score": "+31"
+          }
+        },
+        "B": {
+          "fen": "r1bqkbnr/pppp1ppp/2n5/1B2p2Q/4P3/8/PPPP1PPP/RNB1K1NR b KQkq - 3 3",
+          "opening_moves": "e4 e5 Bb5 Nc6 Qh5",
+          "line": "Nf6 Qe2 Bc5",
+          "alternative": "Nf6 Qxf7+ Kxf7",
+          "purpose": "candidate",
+          "validation": {
+            "id": "01.3B",
+            "title": "Find the threat before developing",
+            "fen": "r1bqkbnr/pppp1ppp/2n5/1B2p2Q/4P3/8/PPPP1PPP/RNB1K1NR b KQkq - 3 3",
+            "line": "Nf6 Qe2 Bc5",
+            "bad": "Nf6 Qxf7+ Kxf7",
+            "checkmate": false,
+            "stalemate": false,
+            "candidates": [
+              {
+                "san": "Nf6",
+                "score": "+187",
+                "depth": 18
+              },
+              {
+                "san": "g6",
+                "score": "+65",
+                "depth": 18
+              },
+              {
+                "san": "d6",
+                "score": "+31",
+                "depth": 18
+              }
+            ],
+            "chosen_score": "+186"
+          }
+        }
+      }
+    }
+  ]
+}

@@ -1,0 +1,71 @@
+[Event "Stop Hanging Pieces / 01.1A"]
+[Site "Original teaching position"]
+[Date "2026.09.10"]
+[Round "01.1"]
+[White "White"]
+[Black "Black"]
+[Result "*"]
+[FEN "r5k1/pp3ppp/4p3/3p4/2B5/4P3/PP3PPP/R5K1 w - - 0 1"]
+[SetUp "1"]
+
+{ Before improving your position, deal with a piece that can be taken. Saving it requires a safe destination, not just a square that looks active. } 1. Bd3 ( 1. Bxd5 { Alternative for comparison; read the explanation before treating it as a recommendation. } 1... exd5 ) 1... Kf8 { Illustrative line. Start with the opponent's immediate capture: ...dxc4 would remove a bishop for no compensation. White should answer that threat now. Bd3 moves the bishop to a safe square and keeps it in the game. After the quiet illustrative reply ...Kf8, the bishop is still safe. That reply is not forced; the point is to check the destination against all enemy attacks before choosing it. Retreating can preserve more useful activity than a material-losing advance. } *
+
+[Event "Stop Hanging Pieces / 01.1B"]
+[Site "Original teaching position"]
+[Date "2026.09.10"]
+[Round "01.1"]
+[White "White"]
+[Black "Black"]
+[Result "*"]
+[FEN "r5k1/pp3p2/6p1/7p/6B1/4P3/PP3PPP/R5K1 w - - 0 1"]
+[SetUp "1"]
+
+{ Exercise. Try the questions in the book before reading this line. } 1. Be2 ( 1. Bxh5 { Alternative for comparison; read the explanation before treating it as a recommendation. } 1... gxh5 ) 1... Kf8 { Illustrative line. The h5-pawn attacks g4. A pawn does not attack the square directly ahead of it; trace its two diagonal capture squares. Bxh5 is met by ...gxh5. The g6-pawn protects h5, so White exchanges a bishop for a pawn and has not saved the piece. Be2 is a safe example. The path g4-f3-e2 is clear, and no black piece attacks e2. Bd1 or Bh3 can also be considered if you verify their paths and destinations; this is not a one-move puzzle. } *
+
+[Event "Stop Hanging Pieces / 01.2A"]
+[Site "Original teaching position"]
+[Date "2026.09.10"]
+[Round "01.2"]
+[White "White"]
+[Black "Black"]
+[Result "*"]
+[FEN "3r2k1/p4ppp/1pn5/8/8/5N1P/PP3PP1/2R3K1 w - - 0 1"]
+[SetUp "1"]
+
+{ An undefended piece can be a real opportunity. The useful habit is not "never take"; it is "take only after checking defenders and forcing replies." } 1. Rxc6 Rd1+ 2. Kh2 { Illustrative line. Rxc6 wins a knight. Before playing it, look for Black's strongest forcing idea: ...Rd1+. The white king can step to h2 because the h-pawn stands on h3 and h2 is not attacked. The sample line stops after the check is answered. White keeps the extra knight; there is still a game to play. A capture can be sound even when the opponent replies with check, provided you can answer the check without returning the gain. } *
+
+[Event "Stop Hanging Pieces / 01.2B"]
+[Site "Original teaching position"]
+[Date "2026.09.10"]
+[Round "01.2"]
+[White "White"]
+[Black "Black"]
+[Result "*"]
+[FEN "3r2k1/pp3ppp/2n5/8/8/5N1P/PP3PP1/2R3K1 w - - 0 1"]
+[SetUp "1"]
+
+{ Exercise. Try the questions in the book before reading this line. } 1. Rc3 { Illustrative line. The black b-pawn is on b7, not b6. From b7 it attacks c6, so the knight now has a pawn defender. Rxc6 bxc6 trades a rook for a knight. Using rough values of rook 5 and knight 3, White gives up about two points of material. These values are guides, but there is no compensating attack in this exercise. Rc3 is one safe example: the rook stays on the c-file and avoids the defended knight. Rc2 and a king move can also be reasonable. The required answer is the defender and the consequence, not a unique quiet move. } ( 1. Rxc6 { Alternative for comparison; read the explanation before treating it as a recommendation. } 1... bxc6 ) *
+
+[Event "Stop Hanging Pieces / 01.3A"]
+[Site "Original teaching position"]
+[Date "2026.09.10"]
+[Round "01.3"]
+[White "White"]
+[Black "Black"]
+[Result "*"]
+[FEN "r1bqkbnr/pppp1ppp/2n5/4p2Q/2B1P3/8/PPPP1PPP/RNB1K1NR b KQkq - 3 3"]
+[SetUp "1"]
+
+{ Development is valuable only if it meets the position's immediate demands. An early queen attack is best answered by identifying the mating square and the piece supporting it. } 3... g6 ( 3... Nf6 { Alternative for comparison; read the explanation before treating it as a recommendation. } 4. Qxf7# ) 4. Qf3 Nf6 { Illustrative line. Black begins with ...g6, interrupting the queen's route to f7 while gaining time against the queen. After Qf3, the queen threatens f7 down the f-file instead. Now ...Nf6 develops a piece and blocks that new line. The same developing move that failed on the first turn works on the second because the attack's geometry has changed. Always reassess after the queen moves. } *
+
+[Event "Stop Hanging Pieces / 01.3B"]
+[Site "Original teaching position"]
+[Date "2026.09.10"]
+[Round "01.3"]
+[White "White"]
+[Black "Black"]
+[Result "*"]
+[FEN "r1bqkbnr/pppp1ppp/2n5/1B2p2Q/4P3/8/PPPP1PPP/RNB1K1NR b KQkq - 3 3"]
+[SetUp "1"]
+
+{ Exercise. Try the questions in the book before reading this line. } 3... Nf6 ( 3... Nf6 { Alternative for comparison; read the explanation before treating it as a recommendation. } 4. Qxf7+ Kxf7 ) 4. Qe2 Bc5 { Illustrative line. White's bishop is on b5 instead of c4. It no longer protects f7. The queen's attack looks similar, but the mating support is absent. Yes. After ...Nf6 Qxf7+ Black can play ...Kxf7. The king is not moving into any white attack on f7. White loses a queen for a pawn; the check is not mate. ...Bc5 develops the f8-bishop and eyes f2. Other sensible developing moves exist. The lesson is to inspect the actual support for a threat before importing a familiar response. } *
