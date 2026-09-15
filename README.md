@@ -4,7 +4,7 @@ Book 01 of **Chess, One Decision at a Time**.
 
 Notice the threat, identify the defender, and check the move you intend to play.
 
-[Read the full web edition](https://knightway8.github.io/chess-safe-moves/) · [Read the 12-page PDF](01_chess_safe_moves.pdf) · [Download the replayable PGN](positions.pgn)
+[Read the full web edition](https://1d42c4.github.io/chess-safe-moves/) · [Read the 12-page PDF](01_chess_safe_moves.pdf) · [Download the replayable PGN](positions.pgn)
 
 ## Three lessons
 
@@ -23,4 +23,4 @@ Each lesson includes a worked board, a position that changes an important detail
 
 Open `index.html` locally or read on GitHub Pages; no build, account, external script, or tracking is required. To report a correction, give the lesson ID, FEN, move and proposed explanation in an issue. Preserve the published edition while reviewing corrections.
 
-[All ten books and earlier collections](https://github.com/knightway8)
+[All ten books and earlier collections](https://github.com/1d42c4)
